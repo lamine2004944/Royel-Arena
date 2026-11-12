@@ -1,10 +1,57 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Arena</title>
+    <link rel="icon" type="image/png" href="./Image/favicon_royal_arena.png">
+    <link rel="stylesheet" href="../Style/inscription.css">
 </head>
 <body>
-    
+    <main class="formulaireconnexion">
+        <img src="Image/logo-royal-arena.png" id="logo" alt="Logo Royal Arena">
+
+        <h2>Inscription</h2>
+        <p class="sous-titre">Créer mon espace</p>
+
+        <form action="connexion.html" method="post">
+
+            <div class="champ">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" required>
+            </div>
+
+            <div class="champ">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required>
+            </div>
+
+            <div class="champ">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemple@mail.com" autocomplete="email" required>
+            </div>
+
+            <div class="champ">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe" autocomplete="new-password" minlength="8" required>
+            </div>
+
+            <div class="champ">
+                <label for="mdp2">Confirmer le mot de passe</label>
+                <input type="password" id="mdp2" name="mdp2" placeholder="Confirmez votre mot de passe" autocomplete="new-password" minlength="8" required>
+            </div>
+
+            <button type="submit" class="btn">S'INSCRIRE</button>
+
+            <p class="ou">ou</p>
+
+            <div class="reseaux">
+                <button type="button" class="btn-outline" disabled>Facebook</button>
+                <button type="button" class="btn-outline" disabled>Google</button>
+            </div>
+
+            <p class="lien-inscription">Déjà membre ? <a href="connexion.html">Se connecter</a></p>
+        </form>
+    </main>
 </body>
 </html>

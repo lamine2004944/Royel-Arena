@@ -1,28 +1,32 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Arena</title>
     <link rel="icon" type="image/png" href="./Image/favicon_royal_arena.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Style/accueil.css">
 </head>
 <body>
     <header class="navbar">
         <div class="navbarlogo">
-                <img src="Image/Logo_Royal_Arena_navbar.png" id="logonavbar">
+                <img src="Image/Logo_Royal_Arena_navbar.png" id="logonavbar" alt="Logo Royal Arena">
         </div>
         <nav class="navbarlist">
                 <div class="list1">
                     <a href="#accueil">Accueil</a>
-                     <a href="#club">Club</a>
-                    <a href="">Football</a>
-                    <a href="">Padel</a>
+                    <a href="#club">Club</a>
+                    <a href="#football">Football</a>
+                    <a href="#padel">Padel</a>
                     <a href="">Réservation</a>
                     <a href="">Contact</a>
                 </div>
                 <div class="list2">
-                    <a href="connexion.html"> <button>Connexion</button></a>
-                    <a href=""> <button>Inscription</button></a>
+                    <a href="connexion.html"> <button class="btn-contour">Connexion</button></a>
+                    <a href="inscription.html"> <button class="btn-or">Inscription</button></a>
                 </div>
 
         </nav>
@@ -30,34 +34,34 @@
     <main class="content">
         <section id="accueil">
             <div>
-                <img src="Image/logo-royal-arena.png" id="logo1">
+                <img src="Image/logo-royal-arena.png" id="logo1" alt="Royal Arena Football & Padel">
             </div>
-           
-            <div class=discréption>
-                <h1>FOOTBALL <SPan style="color: #D4AF37;">&</SPan> PADEL</h1>
-            <p style="color: #D4AF37;">Plus qu'un club, une expérience</p>
+
+            <div class="description-accueil">
+                <h1>FOOTBALL <span class="or">&</span> PADEL</h1>
+            <p class="or">Plus qu'un club, une expérience</p>
             <p>Choisissez vos séance de la semaine en quelques clisc: <br> matchs 5 contre 5, initiation et perfectionnement au padel </p>
             </div>
 
         </section>
-        <secton >
+        <section>
            <div id="club">
             <img src="Image/Royal_Arena_clubint.png" alt="">
             <img src="Image/Royal_Arena_clubex.png" alt="">
-           </div> 
+           </div>
            <div class="disclub">
-            <h2 style="color: #D4AF37;">Rejoins l'aventure</h2>
+            <h2>Rejoins l'aventure</h2>
             <p> Un univers sportif, une même passion</p>
            </div>
-        </secton>
-           <section class="football">
+        </section>
+           <section class="football" id="football">
 
     <div class="football2">
          <h1>FOOTBALL</h1>
         <p>DES TERRAINS POUR TOUS<br>LES NIVEAUX</p>
-        <a href="reservation.html" class="bouton">Réserver un terrain →</a>
+        <a href="connexion.html" class="bouton">Réserver un terrain →</a>
     </div>
-    
+
 
 
         <div class="terrains">
@@ -87,7 +91,7 @@
              </article>
 
             <article class="carte-terrain">
-                 <img src="Image/Terrain de football doré au crépuscule-2.png"
+                 <img src="Image/Terrain de football doré au crépuscule-2.png"
                  alt="Terrain de football en extérieur">
 
                 <div class="description-terrain">
@@ -142,23 +146,20 @@
             </article>
         </div>
 
-        
-      
-
         </div>
 
       <div class="reservation">
              <h2>Prêt à entrer<br>sur le terrain ?</h2>
 
             <div>
-                    <a href="reservation.html" class="bouton-reservation">
+                    <a href="connexion.html" class="bouton-reservation">
                      Réserver un terrain →
                     </a>
                     <p>Jouez · Partagez · Vivez Royal Arena</p>
             </div>
       </div>
 </section>
-        <section class="padel">
+        <section class="padel" id="padel">
             <div class="presentation-padel">
                     <h1>PADEL</h1>
                     <h2>Vibre le padel autrement</h2>
@@ -167,7 +168,7 @@
                         et une passion qui nous rassemble. Au Royal Arena,<br>
                         le padel se vit à tout niveau.
                     </p>
-                    <a href="reservation.html" class="bouton">
+                    <a href="connexion.html" class="bouton">
                     Réserver un terrain →
                     </a>
             </div>
@@ -179,7 +180,7 @@
                                 Jouez toute l’année dans nos terrains couverts,
                                 avec un éclairage professionnel et un confort optimal.
                             </p>
-                            <a href="reservation.html" class="bouton-contour">
+                            <a href="connexion.html" class="bouton-contour">
                                 En savoir plus →
                             </a>
                     </article>
@@ -190,13 +191,13 @@
                                 Profitez de nos terrains en plein air
                                 et vivez une expérience unique au coucher du soleil.
                             </p>
-                            <a href="reservation.html" class="bouton-contour">
+                            <a href="connexion.html" class="bouton-contour">
                                 En savoir plus →
                             </a>
                     </article>
                 </div>
             <div class="materiel">
-                    <img src="Image/Raquettes de padel noires et dorées-2.png"
+                    <img src="Image/Raquettes de padel noires et dorées-2.png"
                         alt="Raquettes de padel et balles">
                     <div class="texte-materiel">
                         <p class="sous-titre">Équipements & niveaux</p>
@@ -221,37 +222,37 @@
                                 <h3>Tous niveaux</h3>
                                 <p>Débutant ou confirmé, chacun trouve sa place.</p>
                             </article>
-                            </div>
-                            </div>
+                        </div>
+                    </div>
             </div>
 
             <div class="avantages-padel">
-                                <div class="titre-avantages">
-                                    <p class="sous-titre">Pourquoi choisir Royal Arena ?</p>
-                                    <h2>Plus qu’un sport,<br><span>une expérience</span></h2>
-                                </div>
+                <div class="titre-avantages">
+                    <p class="sous-titre">Pourquoi choisir Royal Arena ?</p>
+                    <h2>Plus qu’un sport,<br><span>une expérience</span></h2>
+                </div>
 
-                                <div class="liste-avantages">
-                                    <article>
-                                        <h3>Ambiance unique</h3>
-                                        <p>Un cadre moderne et convivial.</p>
-                                    </article>
+                <div class="liste-avantages">
+                    <article>
+                        <h3>Ambiance unique</h3>
+                        <p>Un cadre moderne et convivial.</p>
+                    </article>
 
-                                    <article>
-                                        <h3>Terrains haut de gamme</h3>
-                                        <p>Qualité et entretien au quotidien.</p>
-                                    </article>
+                    <article>
+                        <h3>Terrains haut de gamme</h3>
+                        <p>Qualité et entretien au quotidien.</p>
+                    </article>
 
-                                    <article>
-                                        <h3>Réservation facile</h3>
-                                        <p>En ligne ou sur place, en quelques clics.</p>
-                                    </article>
+                    <article>
+                        <h3>Réservation facile</h3>
+                        <p>En ligne ou sur place, en quelques clics.</p>
+                    </article>
 
-                                    <article>
-                                        <h3>Un club complet</h3>
-                                        <p>Padel et football au même endroit.</p>
-                                    </article>
-                                </div>
+                    <article>
+                        <h3>Un club complet</h3>
+                        <p>Padel et football au même endroit.</p>
+                    </article>
+                </div>
             </div>
 
             <div class="banniere-reservation">
@@ -266,7 +267,7 @@
                         et viens vivre le padel autrement.
                     </p>
 
-                    <a href="reservation.html" class="bouton">
+                    <a href="connexion.html" class="bouton">
                         Réserver un terrain →
                     </a>
                 </div>

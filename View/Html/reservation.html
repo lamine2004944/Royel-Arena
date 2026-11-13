@@ -1,0 +1,172 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Arena</title>
+    <link rel="icon" type="image/png" href="./Image/favicon_royal_arena.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/reservation.css">
+</head>
+<body>
+    <header class="navbar">
+            <div class="navbarlogo">
+                <img src="Image/Logo_Royal_Arena_navbar.png" id="logonavbar" alt="Logo Royal Arena">
+        </div>
+        <nav class="navbarlist">
+                <div class="list1">
+                    <a href="principale.html">Accueil</a>
+                    <a href="principale.html#club">Club</a>
+                    <a href="principale.html#football">Football</a>
+                    <a href="principale.html#padel">Padel</a>
+                    <a href="reservation.html">Réservation</a>
+                    <a href="#contact">Contact</a>
+                </div>
+               
+
+        </nav>
+
+
+
+    </header>
+
+
+    <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>RÉSERVE<br><span>TON TERRAIN</span></h1>
+      <p>Football ou padel, choisis ton sport, ton créneau<br>et réserve ton terrain en quelques clics.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING CARD -->
+  <main class="booking">
+
+    <!-- Étape 1 : Sport -->
+    <section class="step">
+      <div class="step-header">
+        <span class="num">1</span>
+        <div>
+          <h2>CHOISIS TON SPORT</h2>
+          <p>Sélectionne le sport que tu souhaites pratiquer.</p>
+        </div>
+      </div>
+      <div class="sports">
+        <div class="sport-card selected" data-sport="football">
+          <img src="./image/football.png" alt="Terrain de football">
+          <div class="sport-info">
+            <h3>FOOTBALL</h3>
+            <p>Terrain gazon synthétique</p>
+            <small>5v5 / 7v7 / 11v11</small>
+          </div>
+          <span class="check">✓</span>
+        </div>
+        <div class="sport-card" data-sport="padel">
+          <img src="./image/padel.png" alt="Terrain de padel">
+          <div class="sport-info">
+            <h3>PADEL</h3>
+            <p>Terrain indoor / outdoor</p>
+            <small>2v2 / 4v4</small>
+          </div>
+          <span class="check">✓</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Étape 2 : Date -->
+    <section class="step">
+      <div class="step-header">
+        <span class="num">2</span>
+        <div>
+          <h2>CHOISIS TA DATE</h2>
+          <p>Sélectionne la date de ton créneau.</p>
+        </div>
+      </div>
+      <div class="calendar">
+        <div class="cal-nav">
+          <button id="prevMonth" aria-label="Mois précédent">‹</button>
+          <span id="monthLabel"></span>
+          <button id="nextMonth" aria-label="Mois suivant">›</button>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+    </section>
+
+    <!-- Étape 3 : Créneau -->
+    <section class="step">
+      <div class="step-header">
+        <span class="num">3</span>
+        <div>
+          <h2>CHOISIS TON CRÉNEAU</h2>
+          <p>Sélectionne l'heure qui te convient.</p>
+        </div>
+      </div>
+      <div id="slots"></div>
+    </section>
+
+        <!-- Étape 4 : Joueurs -->
+    <section class="step">
+      <div class="step-header">
+        <span class="num">4</span>
+        <div>
+          <h2>JOUEURS</h2>
+          <p>Indique le nombre de joueurs.</p>
+        </div>
+      </div>
+      <div class="player-options" id="playerOptions"></div>
+      <p class="hint" id="playersHint"></p>
+    </section>
+
+  </main>
+
+  <!-- CTA -->
+  <div class="cta-wrapper">
+    <button class="cta" id="btnCheck">VOIR LES DISPONIBILITÉS →</button>
+    <p class="feedback" id="feedback"></p>
+    <p class="reassurance">Réservation en ligne sécurisée • Paiement sécurisé • Annulation gratuite jusqu'à 24h avant</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="features">
+    <div class="feature">
+      <span class="icon">🛡</span>
+      <div><h4>TERRAINS DE QUALITÉ</h4><p>Gazon synthétique dernière génération et terrains indoor modernes.</p></div>
+    </div>
+    <div class="feature">
+      <span class="icon">🕒</span>
+      <div><h4>RÉSERVATION EN LIGNE</h4><p>Simple, rapide et sécurisée 24h/24 - 7j/7.</p></div>
+    </div>
+    <div class="feature">
+      <span class="icon">👥</span>
+      <div><h4>AMBIANCE PREMIUM</h4><p>Un cadre unique pour jouer, partager et se dépasser.</p></div>
+    </div>
+    <div class="slogan">PLUS QU'UN CLUB,<br><span>UNE EXPÉRIENCE</span> <span class="crown">♛</span></div>
+  </footer>
+
+    <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>CONTACTEZ-NOUS</h2>
+    <p class="contact-sub">Une question, une réservation spéciale ? Écris-nous ou appelle-nous.</p>
+    <div class="contact-list">
+      <a href="mailto:royal.arena@royalarena.fr" class="contact-item">
+        <span class="icon">✉</span>
+        <div>
+          <h4>EMAIL</h4>
+          <p>royal.arena@royalarena.fr</p>
+        </div>
+      </a>
+      <a href="tel:0105731157" class="contact-item">
+        <span class="icon">☎</span>
+        <div>
+          <h4>WHATSAPP</h4>
+          <p>+33 6-05-73-11-57</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <script src="/controler/java script/reservation.js"></script>  
+</body>
+</html>

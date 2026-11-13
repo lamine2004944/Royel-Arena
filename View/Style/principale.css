@@ -1,0 +1,448 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+    margin: 0;
+    background-color: #0B0B0B;
+    color: #F8F8F8;
+    font-family: 'Open Sans', sans-serif;
+}
+img { max-width: 100%; }
+a { text-decoration: none; color: #F8F8F8; }
+.or { color: #D4AF37; }
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #0B0B0B;
+    border-bottom: 1px solid #D4AF37;
+}
+.navbarlogo { display: flex; align-items: center; }
+#logonavbar { width: 100%; max-width: 160px; height: auto; }
+.navbarlist {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    flex: 1;
+}
+.list1 { display: flex; gap: 28px; }
+.list1 a {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+}
+.list1 a:hover { color: #D4AF37; border-bottom-color: #D4AF37; }
+.list2 { display: flex; gap: 12px; }
+.list2 button {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+#accueil {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 4%;
+}
+.description-accueil { display: block; max-width: 560px; }
+.description-accueil h1 {
+    font-size: clamp(40px, 6vw, 80px);
+    margin: 0 0 10px;
+    line-height: 1.05;
+}
+.description-accueil p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+.description-accueil p.or {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+#logo1 { height: 80vh; max-width: 100%; object-fit: contain; }
+
+/* ---------- Club ---------- */
+#club {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 4%;
+}
+#club img {
+    width: 45%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #2E2E2E;
+}
+.disclub {
+    text-align: center;
+    padding: 40px 20px 50px;
+}
+.disclub h2 {
+    color: #D4AF37;
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+.disclub p {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* ---------- Boutons ---------- */
+.bouton {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #0B0B0B;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: background-color .2s;
+}
+.bouton:hover { background-color: #e6c458; }
+
+/* ============ FOOTBALL ============ */
+.football2 {
+    background-image: linear-gradient(to right, rgba(11,11,11,0.8), rgba(11,11,11,0.1)),
+        url("../Html/Image/Terrain\ de\ football\ au\ crépuscule.png");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 60px;
+}
+.football2 h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    margin: 0 0 20px;
+}
+.football2 p {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 1.7;
+    margin: 0 0 30px;
+    color: #D4AF37;
+}
+
+.terrains { padding: 60px 60px 50px; }
+.terrains h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0 0 35px;
+}
+.terrains h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #D4AF37;
+    margin: 14px auto 0;
+}
+.liste-terrains { display: flex; gap: 25px; }
+.carte-terrain {
+    flex: 1;
+    min-width: 0;
+    background: #2E2E2E;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+}
+.carte-terrain:hover { transform: translateY(-4px); border-color: #D4AF37; }
+.carte-terrain img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.description-terrain { padding: 22px; }
+.description-terrain h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+.description-terrain span {
+    background-color: #D4AF37;
+    color: #0B0B0B;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.description-terrain p { line-height: 1.6; color: #ddd; }
+.description-terrain ul { padding-left: 20px; line-height: 1.9; }
+.description-terrain li::marker { color: #D4AF37; }
+
+/* Avantages football : section claire */
+.avantages {
+    background-color: #F8F8F8;
+    color: #0B0B0B;
+    padding: 60px 60px;
+    text-align: center;
+}
+.avantages h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+}
+.avantages .liste-avantages { display: flex; gap: 30px; }
+.avantage {
+    flex: 1;
+    padding: 25px 15px;
+    background: #E9DCC6;
+    border-radius: 8px;
+}
+.avantage span { font-size: 40px; }
+.avantage h3 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.avantage p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2E2E2E;
+}
+
+/* Bandeau réservation football */
+.reservation {
+    background-color: #D4AF37;
+    color: #0B0B0B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px 40px;
+    gap: 30px;
+}
+.reservation h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.reservation div { text-align: center; }
+.bouton-reservation {
+    display: inline-block;
+    background-color: #0B0B0B;
+    color: #D4AF37;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color .2s;
+}
+.bouton-reservation:hover { background-color: #2E2E2E; }
+.reservation p {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* ============ PADEL ============ */
+.presentation-padel {
+    background-image: linear-gradient(to right, rgba(11,11,11,0.88), rgba(11,11,11,0.1)),
+        url("../Html/Image/Padel\ nocturne\,\ raquette\ et\ balles\ lumineuses-1.png");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 60px;
+}
+.presentation-padel h1 {
+    display: inline-block;
+    font-size: clamp(56px, 9vw, 100px);
+    margin: 0 0 20px;
+    border-bottom: 6px solid #D4AF37;
+}
+.presentation-padel h2 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #D4AF37;
+    margin: 0 0 15px;
+}
+.presentation-padel p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.terrains-padel { display: flex; gap: 25px; padding: 50px 60px 30px; }
+.terrain {
+    flex: 1;
+    padding: 40px 28px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    transition: border-color .25s;
+}
+.terrain:hover { border-color: #D4AF37; }
+.interieur {
+    background-image: linear-gradient(to right, rgba(11,11,11,0.92), rgba(11,11,11,0.1)),
+        url("../Html/Image/Padel\ bleu\ sous\ lumières\ industrielles-3.png");
+}
+.exterieur {
+    background-image: linear-gradient(to right, rgba(11,11,11,0.92), rgba(11,11,11,0.1)),
+        url("../Html/Image/Padel\ bleu\ au\ coucher\ du\ soleil-7.png");
+}
+.terrain h2 { text-transform: uppercase; font-size: 24px; margin: 0 0 25px; }
+.terrain p { max-width: 240px; font-size: 14px; line-height: 1.7; margin-bottom: 25px; }
+
+.bouton-contour {
+    display: inline-block;
+    border: 1px solid #D4AF37;
+    border-radius: 25px;
+    padding: 10px 22px;
+    color: #F8F8F8;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: background-color .2s, color .2s;
+}
+.bouton-contour:hover { background-color: #D4AF37; color: #0B0B0B; }
+
+.materiel {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 60px;
+}
+.materiel > img {
+    width: 45%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.texte-materiel { flex: 1; min-width: 0; }
+.sous-titre {
+    color: #D4AF37;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.texte-materiel h2 { font-size: 36px; text-transform: uppercase; margin: 15px 0; }
+.texte-materiel h2 span { color: #D4AF37; }
+.texte-materiel p { line-height: 1.7; }
+.liste-equipements { display: flex; gap: 15px; margin-top: 25px; }
+.liste-equipements article {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #D4AF37;
+}
+.liste-equipements h3 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.liste-equipements p { font-size: 12px; color: #ccc; }
+
+/* Avantages padel : section beige */
+.avantages-padel {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 60px;
+    padding: 35px 30px;
+    background-color: #E9DCC6;
+    color: #0B0B0B;
+    border-radius: 8px;
+}
+.titre-avantages { flex: 1; }
+.titre-avantages h2 { font-size: 30px; text-transform: uppercase; margin: 15px 0; }
+.titre-avantages h2 span { color: #a8841c; }
+.avantages-padel .sous-titre { color: #8a6c12; }
+.avantages-padel .liste-avantages {
+    display: flex;
+    flex: 2;
+    gap: 15px;
+    text-align: center;
+}
+.avantages-padel .liste-avantages article {
+    flex: 1;
+    padding: 10px;
+    border-left: 2px solid #D4AF37;
+}
+.avantages-padel .liste-avantages h3 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.avantages-padel .liste-avantages p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #2E2E2E;
+}
+
+.banniere-reservation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-image: linear-gradient(to right, rgba(11,11,11,0.75), rgba(11,11,11,0.2)),
+        url("../Html/Image/Padel\ nocturne\,\ raquette\ et\ balles\ lumineuses-1.png");
+    background-size: cover;
+    background-position: center;
+    margin: 30px 60px 60px;
+    padding: 45px;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+}
+.banniere-reservation h2 { font-size: 36px; text-transform: uppercase; margin: 10px 0; }
+.texte-reservation { text-align: center; }
+.texte-reservation p { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }

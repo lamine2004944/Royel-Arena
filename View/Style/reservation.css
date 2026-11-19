@@ -60,7 +60,7 @@ h1, h2, h3 {
   padding: 60px 80px;
   background:
     linear-gradient(90deg, rgba(11,11,11,0.95) 25%, rgba(11,11,11,0.2) 65%),
-    url("../HTML/image/hero.png ") center / cover no-repeat;
+    url("../HTML/image/hero.png") center / cover no-repeat;
 }
 .hero h1 {
   font-family: 'Bebas Neue', Impact, sans-serif;
@@ -228,8 +228,6 @@ h1, h2, h3 {
   .navbar { padding: 12px 20px; }
   .slot-list { grid-template-columns: repeat(3, 1fr); }
 }
-/* SCROLL DOUX */
-html { scroll-behavior: smooth; }
 
 /* CONTACT */
 .contact {
@@ -258,3 +256,29 @@ html { scroll-behavior: smooth; }
   font-size: 18px; letter-spacing: 1px; color: var(--or);
 }
 .contact-item p { font-size: 14px; font-weight: 600; margin-top: 2px; }
+
+/* Ligne des boutons CTA */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-mes {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 14px 40px;
+  border: 2px solid var(--or);
+  border-radius: 40px;
+  background: transparent;
+  color: var(--or);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-mes:hover {
+  background: var(--or);
+  color: var(--noir);
+  transform: scale(1.04);
+}

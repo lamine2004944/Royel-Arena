@@ -50,6 +50,18 @@ h1, h2, h3 {
     transition: color .2s, border-color .2s;
 }
 .list1 a:hover { color: #D4AF37; border-bottom-color: #D4AF37; }
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.profile img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 12px #D4AF37;
+    border: 2px solid #D4AF37;
+}
 
 /* HERO */
 .hero {

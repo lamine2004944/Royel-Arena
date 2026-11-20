@@ -1,0 +1,231 @@
+/* Styles propres à la page Mes réservations.
+   Charger APRÈS reservation.css, qui fournit la navbar, le hero, les boutons,
+   le footer et le contact identiques à la page réservation. */
+
+[hidden] { display: none !important; }
+
+/* Hero : le texte "BONJOUR" est aussi un <p> dans .hero, on neutralise le style de paragraphe */
+.hero .hero-greeting {
+  margin: 0 0 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--or, #D4AF37);
+  max-width: none;
+}
+
+/* Panneau résumé superposé au hero, même style que le panneau de réservation */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: -50px 60px 40px;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid var(--border, #333);
+  border-radius: 18px;
+  position: relative;
+  z-index: 2;
+}
+.stat {
+  padding: 28px 24px;
+  border-right: 1px solid var(--border, #333);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat:last-child { border-right: none; }
+.stat__label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted, #9A9A9A);
+}
+.stat__value {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 48px;
+  line-height: 1;
+}
+.stat__value--small { font-size: 36px; line-height: 1.1; }
+.gold { color: var(--or, #D4AF37); }
+
+/* Liste */
+.list-section { margin: 0 60px; padding-bottom: 40px; }
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--border, #333);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.tab {
+  background: var(--anthracite, #222);
+  color: var(--blanc, #F8F8F8);
+  border: 1px solid var(--border, #333);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tab:hover { border-color: var(--or, #D4AF37); }
+.tab.is-active {
+  background: var(--or, #D4AF37);
+  color: var(--noir, #0B0B0B);
+  border-color: var(--or, #D4AF37);
+  font-weight: 700;
+}
+.tab:focus-visible, .btn--gold:focus-visible, .btn--outline:focus-visible,
+.btn--ghost:focus-visible, .btn--dark:focus-visible {
+  outline: 2px solid var(--or, #D4AF37);
+  outline-offset: 3px;
+}
+
+/* Boutons (même forme que le bouton CTA de la page réservation) */
+.btn--gold, .btn--outline, .btn--ghost, .btn--dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  padding: 10px 28px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+.btn--gold {
+  background: var(--or, #D4AF37);
+  color: var(--noir, #0B0B0B);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+.btn--outline { background: transparent; color: var(--or, #D4AF37); border-color: var(--or, #D4AF37); }
+.btn--ghost { background: transparent; color: var(--blanc, #F8F8F8); border-color: var(--border, #333); }
+.btn--ghost:hover { border-color: var(--or, #D4AF37); color: var(--or, #D4AF37); }
+.btn--dark { background: var(--noir, #0B0B0B); color: var(--or, #D4AF37); }
+.btn--gold:hover, .btn--outline:hover, .btn--ghost:hover, .btn--dark:hover { transform: scale(1.04); }
+
+/* Cartes de réservation (même esprit que les cartes sport) */
+#reservation-list { display: flex; flex-direction: column; gap: 16px; }
+.resa-card {
+  background: var(--card, #141414);
+  border: 2px solid var(--or, #D4AF37);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 20px 24px;
+  transition: 0.3s;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
+.resa-card:hover { transform: translateY(-3px); }
+.resa-card--past {
+  border-color: var(--border, #333);
+  box-shadow: none;
+  opacity: 0.7;
+}
+.resa-visual {
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resa-visual--football { background: linear-gradient(135deg, #1f3a1f, #0f1f0f); }
+.resa-visual--padel { background: linear-gradient(135deg, #1a2a44, #0c1624); }
+.resa-info { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.badges { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.badge--sport { background: var(--or, #D4AF37); color: var(--noir, #0B0B0B); }
+.badge--ok { background: #1F7A3D; color: var(--blanc, #F8F8F8); }
+.badge--muted { background: var(--anthracite, #222); color: var(--muted, #9A9A9A); }
+.resa-title {
+  margin: 0;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.resa-meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--beige, #E8DCC4);
+  font-size: 14px;
+}
+.resa-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 180px;
+}
+.resa-actions .btn--outline,
+.resa-actions .btn--ghost { width: 100%; }
+.note { font-size: 12px; color: var(--muted, #9A9A9A); text-align: center; }
+.empty { color: var(--muted, #9A9A9A); text-align: center; padding: 40px 0; }
+
+/* Bandeau d'appel (même style que le CTA de la page réservation) */
+.cta-band {
+  margin: 40px 60px 40px;
+  background: var(--or, #D4AF37);
+  color: var(--noir, #0B0B0B);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+.cta-band > div { display: flex; flex-direction: column; gap: 6px; }
+.cta-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.cta-text { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .summary { margin: 0 20px 30px; }
+  .list-section { margin: 0 20px; }
+  .cta-band { margin: 30px 20px; }
+  .resa-card { grid-template-columns: 160px 1fr; }
+  .resa-actions { grid-column: 1 / -1; flex-direction: row; min-width: 0; }
+  .resa-actions > * { flex: 1; }
+  .note { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .summary { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid var(--border, #333); }
+  .stat:last-child { border-bottom: none; }
+  .list-section { margin: 0 20px; }
+  .resa-card { grid-template-columns: 1fr; }
+  .resa-visual { height: 100px; }
+  .resa-actions { flex-direction: column; min-width: 0; }
+}

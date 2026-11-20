@@ -1,42 +1,33 @@
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Arena</title>
-    <link rel="icon" type="image/png" href="./Image/favicon_royal_arena.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Style/reservation.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Arena</title>
+  <link rel="icon" type="image/png" href="./Image/favicon_royal_arena.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Style/reservation.css">
 </head>
 <body>
-    <header class="navbar">
-            <div class="navbarlogo">
-                <img src="Image/Logo_Royal_Arena_navbar.png" id="logonavbar" alt="Logo Royal Arena">
-        </div>
-        <nav class="navbarlist">
-                <div class="list1">
-                    <a href="principale.html">Accueil</a>
-                    <a href="principale.html#club">Club</a>
-                    <a href="principale.html#football">Football</a>
-                    <a href="principale.html#padel">Padel</a>
-                    <a href="reservation.html">Réservation</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div>
-                    <a href="compte.html" class="profile">
-                     <img src="Image/Icône de profil dorée élégante.png" alt="Mon compte">
-                    </a>
-                </div>
+  <header class="navbar">
+    <div class="navbarlogo">
+      <img src="Image/Logo_Royal_Arena_navbar.png" id="logonavbar" alt="Logo Royal Arena">
+    </div>
+    <nav class="navbarlist">
+      <div class="list1">
+        <a href="principale.html">Accueil</a>
+        <a href="principale.html#club">Club</a>
+        <a href="principale.html#football">Football</a>
+        <a href="principale.html#padel">Padel</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-        </nav>
-
-
-
-    </header>
-
-
-    <!-- HERO -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
       <h1>RÉSERVE<br><span>TON TERRAIN</span></h1>
@@ -109,7 +100,7 @@
       <div id="slots"></div>
     </section>
 
-        <!-- Étape 4 : Joueurs -->
+    <!-- Étape 4 : Joueurs -->
     <section class="step">
       <div class="step-header">
         <span class="num">4</span>
@@ -126,7 +117,10 @@
 
   <!-- CTA -->
   <div class="cta-wrapper">
-    <button class="cta" id="btnCheck">VOIR LES DISPONIBILITÉS →</button>
+    <div class="cta-row">
+      <button class="cta" id="btnCheck">VOIR LES DISPONIBILITÉS →</button>
+      <a href="mes-reservation.html" class="btn-mes">MES RÉSERVATIONS</a>
+    </div>
     <p class="feedback" id="feedback"></p>
     <p class="reassurance">Réservation en ligne sécurisée • Paiement sécurisé • Annulation gratuite jusqu'à 24h avant</p>
   </div>
@@ -148,7 +142,7 @@
     <div class="slogan">PLUS QU'UN CLUB,<br><span>UNE EXPÉRIENCE</span> <span class="crown">♛</span></div>
   </footer>
 
-    <!-- CONTACT -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>CONTACTEZ-NOUS</h2>
     <p class="contact-sub">Une question, une réservation spéciale ? Écris-nous ou appelle-nous.</p>
@@ -170,7 +164,6 @@
     </div>
   </section>
 
-
-  <script src="/controler/java script/reservation.js"></script>  
+  <script src="/controler/java script/reservation.js"></script>
 </body>
 </html>

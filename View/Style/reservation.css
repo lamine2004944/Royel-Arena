@@ -216,17 +216,22 @@ h1, h2, h3 {
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .booking { grid-template-columns: 1fr 1fr; margin: 0 20px 30px; }
-  .step:nth-child(2) { border-right: none; }
-  .navbar nav { display: none; }
-  .hero h1 { font-size: 80px; }
+  .step:nth-child(2n) { border-right: none; }
+  .navbar nav { gap: 16px; font-size: 14px; }
+  .hero h1 { font-size: clamp(56px, 7vw, 80px); }
 }
 @media (max-width: 650px) {
   .booking { grid-template-columns: 1fr; }
   .step { border-right: none; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; }
   .hero { padding: 40px 24px; }
-  .hero h1 { font-size: 60px; }
-  .navbar { padding: 12px 20px; }
+  .hero h1 { font-size: clamp(40px, 12vw, 60px); }
+  .navbar { padding: 12px 20px; flex-wrap: wrap; }
+  .navbar nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 13px; }
   .slot-list { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 400px) {
+  .slot-list { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* CONTACT */
